@@ -1,0 +1,27 @@
+{
+  "name": "initial",
+  "version": "0.0.0",
+  "description": "Initialize your node/coffee project",
+  "main": "index.js",
+  "devDependencies": {
+    "cake-dog": "~0.2.3",
+    "should": "~2.1.1",
+    "mocha": "~1.15.1"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sailxjx/initial.git"
+  },
+  "keywords": [
+    "initial",
+    "project"
+  ],
+  "author": "sailxjx",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sailxjx/initial/issues"
+  }
+}

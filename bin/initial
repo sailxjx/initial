@@ -1,3 +1,14 @@
-#!/usr/bin/env node
+#!/bin/bash
 
-require('../lib')()
+BASE_DIR=$(pwd)
+TARGET_DIR=${1:-.}
+
+[[ -f $TARGET_DIR ]] || mkdir -p $TARGET_DIR
+
+cp -rf $BASE_DIR/../assets/ $TARGET_DIR
+
+cd $TARGET_DIR
+
+npm init
+
+npm install --save-dev cake-dog mocha should

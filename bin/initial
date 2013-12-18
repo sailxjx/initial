@@ -1,6 +1,16 @@
 #!/bin/bash
 
-BASE_DIR=$(pwd)
+realpath() {
+  cd $(dirname $1)
+  local LINK_FILE=$(readlink $(basename $1))
+  if [[ $LINK_FILE == '' ]]; then
+    pwd
+  else
+    realpath $LINK_FILE
+  fi
+}
+
+BASE_DIR=$(realpath $0)
 TARGET_DIR=${1:-.}
 
 [[ -f $TARGET_DIR ]] || mkdir -p $TARGET_DIR

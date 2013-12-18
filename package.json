@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "Initialize your node/coffee project",
   "main": "index.js",
+  "bin": {
+    "initial": "./bin/initial"
+  },
   "devDependencies": {
     "cake-dog": "~0.2.3",
     "should": "~2.1.1",

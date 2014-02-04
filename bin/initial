@@ -19,6 +19,8 @@ cp -rf $BASE_DIR/../assets/ $TARGET_DIR
 
 cd $TARGET_DIR
 
-npm init
+$BASE_DIR/init.js
+
+pwd
 
 npm install --save-dev cake-dog mocha should

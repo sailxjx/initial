@@ -4,6 +4,8 @@ path = require('path')
 fs = require('fs')
 
 describe 'initial', ->
+  @timeout(30000)
+
   execCmd = path.join(__dirname, '../bin/initial')
   repos = 'repos'
 
@@ -12,11 +14,12 @@ describe 'initial', ->
     exec("rm -rf #{repos}", done)
 
   it 'should copy all files in assets to target directory', (done) ->
-    exec "#{execCmd} #{repos}", (err, stdout, stderr) ->
-      fs.readdir "#{__dirname}/../assets", (err, files) ->
-        fs.readdir "#{__dirname}/#{repos}", (err, _files) ->
-          _files.should.be.eql(files)
-          done(err)
+
+    child = exec "#{execCmd} #{repos}", (err, stdout, stderr) ->
+      done(err)
+
+    child.stdout.on 'data', (data) -> process.stdout.write(data)
+    child.stderr.on 'data', (data) -> process.stderr.write(data)
 
   after (done) ->
     process.chdir(__dirname)

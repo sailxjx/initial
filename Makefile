@@ -1,6 +1,6 @@
 all: test
 
 test:
-	@./node_modules/.bin/mocha --reporter spec --compilers coffee:coffee-script test/helper.coffee
+	@NODE_ENV=mocha ./node_modules/.bin/mocha --reporter spec test/index.js
 
 .PHONY: all test

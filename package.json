@@ -1,6 +1,6 @@
 {
   "name": "initial",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Initialize your node/coffee project",
   "main": "index.js",
   "bin": {

@@ -15,7 +15,7 @@ function writePkg() {
 
 assetPkg = {
   "version": "0.0.0",
-  "main": "index.js",
+  "main": "./lib/index.js",
   "directories": {
     "test": "test"
   },

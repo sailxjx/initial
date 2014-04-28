@@ -21,6 +21,4 @@ cd $TARGET_DIR
 
 $BASE_DIR/init.js
 
-pwd
-
 npm install --save-dev cake-dog mocha should

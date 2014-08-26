@@ -1,0 +1,11 @@
+{
+  "version": "0.0.0",
+  "main": "./lib/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "license": "MIT"
+}

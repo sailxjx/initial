@@ -71,11 +71,11 @@ if (!pkg.repository) {
 if (!pkg.author) {
   try {
     var config = fs.readFileSync(path.join(process.env.HOME + '', '.gitconfig'), {encoding: 'utf-8'}),
-        user, email;
-    user = config.match(/name ?\=(.*)/)[1].trim();
+        name, email;
+    name = config.match(/name ?\=(.*)/)[1].trim();
     email = config.match(/email ?\=(.*)/)[1].trim();
     pkg.author = {
-      user: user,
+      name: name,
       email: email
     };
   } catch (e) {

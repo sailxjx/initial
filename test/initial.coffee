@@ -19,7 +19,6 @@ describe 'initial', ->
       files = fs.readdirSync(path.resolve(repos))
       files.should.containEql 'README.md'
       pkg = require(path.resolve(repos + '/package.json'))
-      console.log pkg
       pkg.should.have.properties 'name', 'repository', 'description'
       done(err)
 
